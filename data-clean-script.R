@@ -41,11 +41,11 @@ for (whichfile in fileset)
 # Save the data in a file
   names(output) <- headers
   if (!headeradded) {
-    write.table(output[1:100,],"output.txt",sep="\t",col.names=TRUE,row.names=FALSE)
+    write.table(output,"output.txt",sep="\t",col.names=TRUE,row.names=FALSE)
     headeradded <- TRUE
   }
   else   
-    write.table(output[1:100,],"output.txt",sep="\t",append = TRUE, col.names=FALSE,row.names=FALSE)
+    write.table(output,"output.txt",sep="\t",append = TRUE, col.names=FALSE,row.names=FALSE)
   }
 
 # Summarizing the data by user and by activity
